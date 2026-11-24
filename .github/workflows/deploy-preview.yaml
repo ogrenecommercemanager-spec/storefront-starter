@@ -33,7 +33,7 @@ jobs:
       - name: Build
         env:
           VITE_COMMIT_SHA: ${{ github.sha }}
-          VITE_BASE_PATH: /storefront-starter/
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
         run: npm run build
 
       - name: Configure Pages
